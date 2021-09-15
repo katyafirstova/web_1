@@ -1,0 +1,125 @@
+body {
+    font-size: 16px;
+    font-family: "Open Sans", "Arial", sans-serif;
+    background-color: #e9e6ee;
+}
+
+header {
+    background-color:slategrey;
+
+}
+
+.button {
+    width: 250px;
+    color:black;
+    border-radius: 4px;
+    background-color:papayawhip;
+    padding: 15px 32px;
+    font-family: sans-serif;
+    font-size: 12px;
+    /* text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 2px;
+    position: relative;
+    border: none;
+    color: white;
+    width: 150px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    box-shadow: 0 5px 15px #193047; */
+}
+
+.button:hover {
+    background-color:mediumslateblue;
+    color:black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.button:focus {
+    background-color:mediumslateblue;
+    color:black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+}
+
+.supbutton {
+    width: 200px;
+    border-radius: 4px;
+}
+
+.supbutton:hover {
+    background-color:mediumslateblue;
+    color:black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.supbutton:focus {
+    background-color:mediumslateblue;
+    color:black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.option {
+
+    background-color: papayawhip;
+    border-radius: 0;
+    background: transparent;
+    height: 20px;
+    padding: 5px;
+    border: 0;
+    font-size: 12px;
+    line-height: 1;
+    -webkit-appearance: none;
+    width: 150px;
+
+
+}
+
+  
+
+
+
+
+
+.heading {
+
+font-family: sans-serif;
+font-size: 12px;
+color: black;
+background-size:auto;
+background-color:slategray;
+}
+
+form {   
+
+            float: right;
+            width: 80%;       
+            right: 0;
+            text-align: center;
+            font-size: 10pt;
+            font-weight: bold;
+            font-family: Arial ;
+            border: darkgray;
+           
+        }
+
+input[type="radio"] {
+        
+            }
+
+figure {
+
+    width: 80%;
+
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+        }
+
+.enterX {
+    text-align: center;
+}
