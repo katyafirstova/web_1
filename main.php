@@ -6,11 +6,6 @@ $currentTime = date("H:i:s");
 session_start();
 
 
-
-if ($_SESSION['sessionTable']) {
-    echo $_SESSION['sessionTable'];
-} 
-
 $x = !empty($_GET['x']) ? $_GET(['x']) : 'Координата x не распознана ';
 $y = !empty($_GET['y']) ? $_GET['x'] : 'Координата y не распознана';
 $r = !empty($_GET['r']) ? $_GET['y'] : 'Значение R не распознано';
@@ -49,8 +44,6 @@ echo "<table>
     <th>Текущее время</th>
     <th>Время работы скрипта</th>
 </tr>";
-foreach ($_SESSION["sessionTable"] as $sessionTable) echo $sessionTable;
-
 
 foreach ($_GET['x', 'y', 'r'] as $x, $y, $r) {
 $_SESSION['x', 'y', 'r'] = $_GET['x', 'y', 'r'];
