@@ -1,0 +1,104 @@
+/* @import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+.button {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background-color:papayawhip;
+    color:black;
+    border: 2px solid mediumslateblue;
+    outline: none;
+    transition: 1s ease-in-out;
+   
+}
+
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+  } */
+
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #4F95DA;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: black;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+
+  
+  
+
+
+
+
+
+
+.supbutton {
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 4px;
+
+}
+
+.supbutton:hover {
+    background-color:mediumslateblue;
+    color:black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.supbutton:focus {
+    background-color:mediumslateblue;
+    color:black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
