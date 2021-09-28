@@ -4,20 +4,19 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <title>web-1</title>
 </head>
 
 <body>
-   
-
-        <header>
+   <header>
             <h1 align="center">
                 Лабораторная работа №1 по веб-программированию
             </h1>
-            <h2 align="center">
+            <h2 align="right">
                 Фирстова Екатерина Витальевна
                 <br>
                 Вариант 14212
-            </h2>
+            </h2>              
         </header>
     </div>
 
@@ -30,69 +29,123 @@
             </td>
 
             <td width="80%">
-                <form align="right" action = main.php method="GET"> 
-                        <div class="form">
-
-                     
+                <form align="right" action = main.php method="GET" class="form"> 
                             <h2>
                                 Выберите X:
                             </h2>
-                      
-   
-                   
-                         
-                               <input name="X-button" class = "button" type = "button" value="-5">
-                               <input name="X-button" class = "button" type = "button" value="-4">
-                               <input name="X-button" class = "button" type = "button" value="-3"><Br>
-                               <input name="X-button" class = "button" type = "button" value="-2">
-                               <input name="X-button" class = "button" type = "button" value="-1">
-                               <input name="X-button" class = "button" type = "button" value="0"><Br>
-                               <input name="X-button" class = "button" type = "button" value="1">
-                               <input name="X-button" class = "button" type = "button" value="2">
-                               <input name="X-button" class = "button" type = "button" value="3"><Br>
-                  
-                   
-                    <p><input name="login" placeholder="Логин"></p>
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="-5">
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="-4">
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="-3"><Br>
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="-2">
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="-1">
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="0"><Br>
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="1">
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="2">
+                               <input name="X-button" id="x" onclick="validateX" class = "button" type = "button" value="3"><Br>
+                               <div id="Xerror"></div>
 
-                    <input name="texty" type="text"/>
-                 
-          
-                           
-                              
-                    
-            
+
+                    <script>
+                        x.onblur = function() {
+                            if(document.getElementsByClassName("button").clicked == false) {
+                            Xerror.innerHTML = 'Выберите значение X'
+                            this.classList.add("Xerror");
+                            y.classList.add('invalid');
+                        }
+                    };
+
+                        x.onfocus = function() {
+                            if (this.classList.contains('invalid')) {
+                                this.classList.remove('invalid');
+                                error.innerHTML = "";
+                                }
+                            };
+
+                    </script>
+
+                    <br><br><br><br>
+                    <h2>
+                        Введите Y:
+                    </h2>
+                    <input id="y" class="inputY" placeholder="Введите значение от -3 до 3">
+                    <div id="error"></div>
+                    <script>
+                         y.onblur = function() {
+                            if (y.value.includes('^[^0-9]$')) { 
+                            this.classList.add("error");
+                            y.classList.add('invalid');
+                            error.innerHTML = 'Некорректный ввод'
+                            }
+                        };
+
+                        y.onfocus = function() {
+                            if (this.classList.contains('invalid')) {
+                                this.classList.remove('invalid');
+                                error.innerHTML = "";
+                                }
+                            };
+                    </script>
+
+
+
+
+
+
                     <h2>
                         Выберите R:
                     </h2>
                   
-               
-                    <select>
+                    <select class="selectR" id="select">
+                        <option class="option" id="unchecked"></option>
                         <option class="option">1</option>
                         <option class="option">1.5</option>
                         <option class="option">2</option>
                         <option class="option">2.5</option>
                         <option class="option">3</option>
                     </select>
-               
-                
-                    <br>
-                    <button name="suputton" class = "supbutton" type="submit">Отправить</button>
 
-                </div>
+                    <div id="selectError"></div>
+
+                    <script>
+                        select.onblur = function() {
+                        if(select.getElementsById == unchecked) {
+                            selectError.innerHTML = 'Выберите значение'
+                        }
+                        else {
+                            error.innerHTML = "";
+                        }
+                       
+                    }
+                    </script>
+                    <br>
+                    <button name="submit" class = "supbutton" type="submit" onclick="validate()">Отправить</button>
                 </form>
             </td>
     </tr>
     </table>
 
-    <table>
-        <tr>
-                    
-                    <th scope="col">x</th>
-                    <th scope="col">y</th>
-                    <th scope="col">r</th>
-                    <th scope="col">Результат</th>
-                    <th scope="col">Текущее время</th>
-                    <th scope="col">Время выполнения</th>
+
+    <script>
+
+        function validateY() {
+            var yInput = document.getElementsById("y");
+                if(/\D/.test(yInput)) {
+                    alert("Введите только число");       
+            }
+
+                else if(yInput<=-3 || yInput>=3 ) {
+                    alert("Введите число в диапазоне от -3 до 3");
+                }
+        }
+
+        function validateX() {
+            var xInput = document.getElementsByName("X-button");
+        }
+    </script>
+   
+
+   
         
 
 </body>
+        

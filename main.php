@@ -33,8 +33,9 @@ $result = array($x, $y, $r, $res, $currentTime, $time);
 $finish = microtime(true);
 $executionTime = $finish-$start;
 $executionTime = round($executionTime,7);
+$sessionTable = compact('x', 'y', 'r', 'res', 'currentTime', 'executionTime') ;
 
-array_push($_SESSION["sessionTable"],  "<tr>
+array_push($_SESSION["sessionTable"],  " <tr>
 <td>$x</td>
 <td>$y</td>
 <td>$r</td>
@@ -42,30 +43,33 @@ array_push($_SESSION["sessionTable"],  "<tr>
 <td>$currentTime</td>
 <td>$executionTime</td>
 
-echo '<table>
-<tr>
-    <td>x</td>
-    <td>y</td>
-    <td>r</td>
-    <td>Точка входит в ОДЗ</td>
-    <td>Текущее время</td>
-    <td>Время работы скрипта</td>
-</tr>';
+</tr>");
 
-foreach ($_GET['x', 'y', 'r'] as $x, $y, $r) {
-$_SESSION['x', 'y', 'r'] = $_GET['x', 'y', 'r'];
-            $rows = get_info($x,$y, $r);
-            if (count($rows)) {
-                foreach ($rows as $row) {       
-                    $_SESSION['row'] = $rows;
-                    echo "<tr>" .
-                        "<td>" . $row['x'] . "</td>" .
-                        "<td>" . $row['y'] . "</td>" .
-                        "<td>" . $row['r'] . "</td>" .
-                        "<td>" . $row['status'] . "</td>" .
-                        "<td>" . $row['curTime'] . "</td>" .
-                        "<td>" . $row['exTime'] . "</td>" .
-                        "</tr>";
-echo "</table>";
+
 ?>
- 
+
+<html>
+<h3 align="center"><?php echo $res; ?></h3>
+<br>
+<table>
+    <tr>
+        <td>X</td>
+        <td>Y</td>
+        <td>R</td>
+        <td>Результат</td>
+        <td>Текущее время</td>
+        <td>Время выполнения скрипта</td>
+    </tr>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
