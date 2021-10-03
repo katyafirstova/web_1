@@ -35,89 +35,41 @@
                             <h2>
                                 Выберите X:
                             </h2>
-                            <div class="container">
-                                <div class="center">
-                                  <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                     
-                                    </svg>
-                                    <span>-5</span>
-                                  </button>
+                               <button name ="x-button" class="button">
+                                 -5
+                               </button>
+                               <button name ="x-button" class="button">
+                                -4
+                              </button>
+                              <button name ="x-button" class="button">
+                                -3
+                              </button>
+                              <br>
+                              <button name ="x-button" class="button">
+                                -2
+                              </button>
+                              <button name ="x-button" class="button">
+                                -1
+                              </button>
+                              <button name ="x-button" class="button">
+                                0
+                              </button>
+                              <br>
+                              <button name ="x-button" class="button">
+                                1
+                              </button>
+                              <button name ="x-button" class="button">
+                                2
+                              </button>
+                              <button name ="x-button" class="button">
+                                3
+                            </button>
+                              <br>
 
-                                  <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                    <span>-4</span>
-                                  </button>
-                                  <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                    <span>-3</span>
-                                  </button>
 
-                                <br>
-                                <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                    <span>-2</span>
-                                  </button>
-                                  <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                    <span>-1</span>
-                                  </button>
-                                    <button class="btn">
-                            
-                                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                          <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                          <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                        </svg>
-                                        <span>0</span>
-                                      </button>
-                                <br>
-                                <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                    <span>1</span>
-                                  </button>
-                                  <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                    <span>2</span>
-                                  </button>
-                                  <button class="btn">
-                            
-                                    <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                      <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                    </svg>
-                                    <span>3</span>
-                                  </button>
-                                    </div>
-                                  </div>
-                                <br><br><br><br>
-                            </div>
-                               <div id="Xerror"></div>
+                        
+
+                           
 
 
 
@@ -129,34 +81,24 @@
                             y.classList.add('invalid');
                         }
                     };
-
                         x.onfocus = function() {
                             if (this.classList.contains('invalid')) {
                                 this.classList.remove('invalid');
                                 error.innerHTML = "";
                                 }
                             };
-
                     </script> -->
 
                     <br><br><br><br>
-                    <!-- <h2>
+                    <h2>
                         Введите Y:
                     </h2>
-                    <input id="y" class="inputY" required>
-
+                    <input id="y" min ="-3" max="5" class="inputY" pattern = "[0-9]" placeholder = "Введите значение от -3 до 5" >
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
                     
                         
-                                        <span class="highlight"></span>
-                                        <span class="bar"></span> -->
-                    <div class="group">      
-                        <input type="text" required>
-                        <span class="bar"></span>
-                        <label>Введите Y: </label>
-                    </div>
-
-
-                    <div id="error"></div>
+               <div id="error"></div>
                     <script>
                          y.onblur = function() {
                             if (y.value.includes('^[^0-9]$')) { 
@@ -206,7 +148,19 @@
                     }
                     </script>
                     <br>
-                    <button name="submit" class = "supbutton" type="submit" onclick="validate()">Отправить</button>
+                    <button name="submit" class = "supbutton" type="submit" >
+                      
+                    Отправить
+
+                    
+                    <svg>
+                      <rect>
+
+                      </rect>
+                    </svg>
+                    
+                    </button>
+
                 </form>
             </td>
     </tr>
@@ -232,7 +186,7 @@
     </script>
    
 
-   
+   <script src="validation.js"></script>
         
 
 </body>
