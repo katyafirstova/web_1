@@ -1,0 +1,61 @@
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #e9e6ee;
+  overflow: hidden;
+  font-family: "TeXGyreAdventor-Regular";
+  src: url("/fonts/TeXGyreAdventor-Regular.ttf") format("truetype"); 
+}
+
+
+header {
+    background-color: #D8BFD8;
+    padding-top: 20px;
+    color: black;
+    letter-spacing: 1.5px;
+}
+
+header > h2 {padding-right: 15px; padding-bottom: 10px;}
+
+.heading {
+
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 12px;
+color: black;
+background-size:auto;
+background-color:slategray;
+
+}
+
+.form {
+
+    padding-top: 0%;
+    padding-bottom: 10%;
+  
+    
+    padding-right: 85%;
+    text-align: center;
+  
+  }
+
+ img {
+            padding: 30% 40% 60% 5%;
+            width: 250px;
+            height: 250px;
+        }
+
+h2 {
+    font-size: medium;
+    letter-spacing: 1.5px;
+}
+
+.invalid {
+    background: red;
+}
+
+#error { color: red }
+
+#selectError { color: re;}
