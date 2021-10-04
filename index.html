@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="select.css">
+
     <title>web-1</title>
 </head>
 
@@ -24,141 +26,80 @@
 
     <table >
         <tr>
-            <td width="20%">
+            <td width="10%">
                 <figure align ="left">
                       <img src="img.png">
                 ﻿</figure>
             </td>
 
-            <td width="80%">
-                <form align="right" action = main.php method="GET" class="form"> 
+            <td width="500%">
+                <form align="center" action = main.php method="GET" id="form" novalidate> 
                             <h2>
                                 Выберите X:
                             </h2>
-                               <button name ="x-button" class="button">
+                            <div>
+                        
+                               <button name ="x-button" id="button" class="button" required="required" aria-required="true" title="Выберите значение x">
                                  -5
                                </button>
-                               <button name ="x-button" class="button">
+                               <button name ="x-button" class="rightbutton">
                                 -4
                               </button>
-                              <button name ="x-button" class="button">
+                              <button name ="x-button" class="rightbutton">
                                 -3
                               </button>
                               <br>
                               <button name ="x-button" class="button">
                                 -2
                               </button>
-                              <button name ="x-button" class="button">
+                              <button name ="x-button" class="rightbutton">
                                 -1
                               </button>
-                              <button name ="x-button" class="button">
+                              <button name ="x-button" class="rightbutton">
                                 0
                               </button>
                               <br>
                               <button name ="x-button" class="button">
                                 1
                               </button>
-                              <button name ="x-button" class="button">
+                              <button name ="x-button" class="rightbutton">
                                 2
                               </button>
-                              <button name ="x-button" class="button">
+                              <button name ="x-button" class="rightbutton">
                                 3
                             </button>
+                            <span class="error" aria-live="polite"></span>
                               <br>
-
-
-                        
-
-                           
-
-
-
-                    <!-- <script>
-                        x.onblur = function() {
-                            if(document.getElementsByClassName("btn").clicked == false) {
-                            Xerror.innerHTML = 'Выберите значение X'
-                            this.classList.add("Xerror");
-                            y.classList.add('invalid');
-                        }
-                    };
-                        x.onfocus = function() {
-                            if (this.classList.contains('invalid')) {
-                                this.classList.remove('invalid');
-                                error.innerHTML = "";
-                                }
-                            };
-                    </script> -->
-
-                    <br><br><br><br>
+                       </div>
+<br>
                     <h2>
                         Введите Y:
                     </h2>
-                    <input id="y" min ="-3" max="5" class="inputY" pattern = "[0-9]" placeholder = "Введите значение от -3 до 5" >
+                    <div>
+                    <input id="y" min ="-3" max="5" class="inputY" placeholder = "Введите значение от -3 до 5" required="required"
+                     aria-required="true" pattern="[0-9]" title="Введите только цифры" title1 = "Введите значение от -5 до 3">
                         <span class="highlight"></span>
                         <span class="bar"></span>
-                    
-                        
-               <div id="error"></div>
-                    <script>
-                         y.onblur = function() {
-                            if (y.value.includes('^[^0-9]$')) { 
-                            this.classList.add("error");
-                            y.classList.add('invalid');
-                            error.innerHTML = 'Некорректный ввод'
-                            }
-                        };
-
-                        y.onfocus = function() {
-                            if (this.classList.contains('invalid')) {
-                                this.classList.remove('invalid');
-                                error.innerHTML = "";
-                                }
-                            };
-                    </script>
-
-
-
-
-
-
+                        <span class="error" aria-live="polite"></span>
+                    </div>
                     <h2>
                         Выберите R:
                     </h2>
-                  
+                  <div>
                     <select class="selectR" id="select">
-                        <option class="option" id="unchecked"></option>
+                  
                         <option class="option">1</option>
                         <option class="option">1.5</option>
                         <option class="option">2</option>
                         <option class="option">2.5</option>
                         <option class="option">3</option>
                     </select>
-
-                    <div id="selectError"></div>
-
-                    <script>
-                        select.onblur = function() {
-                        if(select.getElementsById == unchecked) {
-                            selectError.innerHTML = 'Выберите значение'
-                        }
-                        else {
-                            error.innerHTML = "";
-                        }
-                       
-                    }
-                    </script>
-                    <br>
-                    <button name="submit" class = "supbutton" type="submit" >
-                      
-                    Отправить
-
-                    
-                    <svg>
-                      <rect>
-
-                      </rect>
-                    </svg>
-                    
+                  </div>
+                    <button name="submit" class = "supbutton" type="submit">   
+                        Отправить
+                            <svg>
+                                <rect></rect>
+                            </svg>
                     </button>
 
                 </form>
@@ -167,26 +108,8 @@
     </table>
 
 
-    <script>
-
-        function validateY() {
-            var yInput = document.getElementsById("y");
-                if(/\D/.test(yInput)) {
-                    alert("Введите только число");       
-            }
-
-                else if(yInput<=-3 || yInput>=3 ) {
-                    alert("Введите число в диапазоне от -3 до 3");
-                }
-        }
-
-        function validateX() {
-            var xInput = document.getElementsByName("X-button");
-        }
-    </script>
-   
-
-   <script src="validation.js"></script>
+      
+    <script src="validation.js"></script>
         
 
 </body>

@@ -1,9 +1,12 @@
-let x, y, r;
+"use strict"
 
+let x, y, r;
+var input = document.getElementsByClassName("inputY");
+var form = document.getElementById("form");
 
 window.onload = function () {
 
-    let buttons = document.querySelectorAll("input[name=X-button]");
+    let buttons = document.querySelectorAll("button[name = x-button]");
     buttons.forEach(click);
 
     function click(element) {
@@ -19,19 +22,55 @@ window.onload = function () {
     }
 };
 
-
-x.onblur = function() {
-    if(document.getElementsByClassName("btn").clicked == false) {
-    Xerror.innerHTML = 'Выберите значение X'
-    this.classList.add("Xerror");
-    y.classList.add('invalid');
+function validateY(elem) {
+	var error = elem.parentElement.querySelector(".error");
+	if (!elem.validity.valid) {
+		elem.setAttribute("aria-invalid", true);
+		error.classList.add("active");
+		error.innerHTML = elem.getAttribute("title");
+    }
+    else if(elem.value > 5 || elem.validity < -5) {
+        elem.setAttribute("aria-invalid", true);
+		error.classList.add("active");
+		error.innerHTML = elem.getAttribute("title1")
+    }
+	else {
+		elem.removeAttribute("aria-invalid");
+		error.innerHTML = "";
+		error.classList.remove("active");
+	}
 }
-};
-x.onfocus = function() {
-    if (this.classList.contains('invalid')) {
-        this.classList.remove('invalid');
-        error.innerHTML = "";
-        }
-    };
+
+form.addEventListener("change", function(e) {
+	var changedInput = e.target;
+	validateY(changedInput);
+});
+
+
+function validateR() {
+    select.onblur = function() {
+    if(select.value = "unchecked") {
+        elem.setAttribute("aria-invalid", true);
+		error.classList.add("active");
+		error.innerHTML = elem.getAttribute("title")
+    }
+	else {
+		elem.removeAttribute("aria-invalid");
+		error.innerHTML = "";
+		error.classList.remove("active");
+	}
+    }
+}
+
+
+    // function getTable() {
+    //     fetch("main.php", {
+    //         method: "GET",
+    //         body: "x=" + encodeURIComponent(x) + "&y=" + encodeURIComponent(y) + "&r=" + encodeURIComponent(r) +
+    //             "&timezone=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)
+    //     })
+    // }
+
+
 
 

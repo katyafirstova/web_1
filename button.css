@@ -1,29 +1,30 @@
-.button {
-  width:60px;
-  height: 40px;
+.button,
+.rightbutton {
+  width:40px;
+  height: 35px;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 2px;
   position: relative;
-  background-color: mediumslateblue;
+  background-color: #B0C4DE;
   border: none;
   color: black;
-  padding: 15px;
-  width: 150px;
   transition-duration: 0.4s;
   overflow: hidden;
   box-shadow: 0 5px 15px blue;
   border-radius: 4px;
 }
 
-.button:hover {
+.button:hover,
+.rightbutton:hover {
   background: #E0FFFF;
   box-shadow: 0 2px 10px 5px #eb2a5a;
   color: black;
 }
 
-.button::after {
+.button::after,
+.rightbutton::after {
   content: "";
   background: #E0FFFF;
   display: block;
@@ -36,52 +37,22 @@
   transition: all 0.8s
 }
 
-.button:active::after {
+.button:active::after, 
+.rightbutton:active::after {
   padding: 0;
   margin: 0;
   opacity: 1;
   transition: 0s
 }
 
-.button:focus {outline: 0}
+.button:focus,
+.rightbutton:focus {outline: 0}
 
-
-
-
-
-/* .button {
-  width: 180px;
-  height: 60px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #91C9FF;
-  outline: none;
-  transition: 0.3s ease-in-out;
-}
-
-.button_svg,
-.button_rect
- {
-  position: absolute;
-  
-  width: 180px;
-  height: 60px;
-  fill: none;
-}
-
-.button_rect {
-  stroke: blue;
-  stroke-width: 2px;
-  stroke-dasharray: 70px 210px;
-  stroke-dashoffset: 595px;
+.rightbutton {
+  margin-left: 25px;
 }
 
 
-.button:hover .button_rect,
-.button:focus .button_rect {
-  stroke: yellow;
-  stroke-dashoffset: 105px;
-} */
 
 .supbutton {
     margin-top: 20px;
@@ -109,7 +80,7 @@ svg rect {
   fill: transparent;
   stroke: black;
   stroke-width: 3px;
-  stroke-dasharray: 20 190 50 180 ;
+  stroke-dasharray: 30 190 40 190;
   transition: .5s all ;
 }
 
@@ -129,6 +100,20 @@ svg rect {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+.error {
+  width  : 100%;
+  padding: 0;
+ 
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+ 
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-
+.error.active {
+  padding: 0.3em;
+}
 
