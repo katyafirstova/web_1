@@ -63,13 +63,6 @@ function validateR() {
 }
 
 
-    // function getTable() {
-    //     fetch("main.php", {
-    //         method: "GET",
-    //         body: "x=" + encodeURIComponent(x) + "&y=" + encodeURIComponent(y) + "&r=" + encodeURIComponent(r) +
-    //             "&timezone=" + encodeURIComponent(Intl.DateTimeFormat().resolvedOptions().timeZone)
-    //     })
-    // }
 
 
 
