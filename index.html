@@ -39,33 +39,33 @@
                             </h2>
                             <div>
                         
-                               <button name ="x-button" id="button" class="button" required="required" aria-required="true" title="Выберите значение x">
+                               <button name ="x" id="button" class="button" required="required" aria-required="true" titleX="Выберите значение x">
                                  -5
                                </button>
-                               <button name ="x-button" class="rightbutton">
+                               <button name ="x" class="rightButton" titleX="Выберите значение x">
                                 -4
                               </button>
-                              <button name ="x-button" class="rightbutton">
+                              <button name ="x" class=rightButton"  titleX="Выберите значение x">
                                 -3
                               </button>
                               <br>
-                              <button name ="x-button" class="button">
+                              <button name ="x" class="button" titleX="Выберите значение x">
                                 -2
                               </button>
-                              <button name ="x-button" class="rightbutton">
+                              <button name ="x" class=rightButton"  titleX="Выберите значение x">
                                 -1
                               </button>
-                              <button name ="x-button" class="rightbutton">
+                              <button name ="x" class=rightButton"  titleX="Выберите значение x">
                                 0
                               </button>
                               <br>
-                              <button name ="x-button" class="button">
+                              <button name ="x" class="button" titleX="Выберите значение x">
                                 1
                               </button>
-                              <button name ="x-button" class="rightbutton">
+                              <button name ="x" class=rightButton"  titleX="Выберите значение x">
                                 2
                               </button>
-                              <button name ="x-button" class="rightbutton">
+                              <button name ="x" class=rightButton"  titleX="Выберите значение x">
                                 3
                             </button>
                             <span class="error" aria-live="polite"></span>
@@ -76,7 +76,7 @@
                         Введите Y:
                     </h2>
                     <div>
-                    <input id="y" min ="-3" max="5" class="inputY" placeholder = "Введите значение от -3 до 5" required="required"
+                    <input name="y" min ="-3" max="5" class="inputY" placeholder = "Введите значение от -3 до 5" required="required"
                      aria-required="true" pattern="[0-9]" title="Введите только цифры" title1 = "Введите значение от -5 до 3">
                         <span class="highlight"></span>
                         <span class="bar"></span>
@@ -87,24 +87,23 @@
                     </h2>
                   <div>
                     <select class="selectR" id="select">
-                  
-                        <option class="option">1</option>
-                        <option class="option">1.5</option>
-                        <option class="option">2</option>
-                        <option class="option">2.5</option>
-                        <option class="option">3</option>
+                        <option name="r" class="option"></option>
+                        <option name="r" class="option">1</option>
+                        <option name="r" class="option">1.5</option>
+                        <option name="r" class="option">2</option>
+                        <option name="r" class="option">2.5</option>
+                        <option name="r" class="option">3</option>
                     </select>
                   </div>
-                    <button name="submit" class = "supbutton" type="submit">   
+                    <button name="submit" class = "submitButton" type="submit">
                         Отправить
                             <svg>
                                 <rect></rect>
                             </svg>
                     </button>
-
                 </form>
             </td>
-    </tr>
+        </tr>
     </table>
 
 

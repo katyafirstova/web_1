@@ -47,20 +47,45 @@ form.addEventListener("change", function(e) {
 });
 
 
-function validateR() {
-    select.onblur = function() {
-    if(select.value = "unchecked") {
+function validateX() {
+    if(document.getElementsByName("x-button") == null) {
         elem.setAttribute("aria-invalid", true);
 		error.classList.add("active");
-		error.innerHTML = elem.getAttribute("title")
+		error.innerHTML = elem.getAttribute("titleX");
+
     }
-	else {
+    else {
 		elem.removeAttribute("aria-invalid");
 		error.innerHTML = "";
 		error.classList.remove("active");
 	}
+
+function validateR() {
+    select = document.getElementsByClassName("selectR");
+    if(!select.value == ""){
+        return true;
+    }
+    else {
+    return false;
+}}
+
+function send() {
+    var params = new URLSearchParams('x=' + x + '&y=' + y + "&r=" + r); 
+    if(validateX() && validateY() && validateR) {
+        fetch("main.php", {
+            method: "GET",
+            body: params
+        })
+
     }
 }
+
+}
+
+
+
+
+
 
 
 

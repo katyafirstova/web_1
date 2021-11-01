@@ -1,5 +1,5 @@
 .button,
-.rightbutton {
+.rightButton {
   width:40px;
   height: 35px;
   text-align: center;
@@ -17,14 +17,14 @@
 }
 
 .button:hover,
-.rightbutton:hover {
+.rightButton:hover {
   background: #E0FFFF;
   box-shadow: 0 2px 10px 5px #eb2a5a;
   color: black;
 }
 
 .button::after,
-.rightbutton::after {
+.rightButton::after {
   content: "";
   background: #E0FFFF;
   display: block;
@@ -35,10 +35,10 @@
   margin-top: -120%;
   opacity: 0;
   transition: all 0.8s
-}
+}button
 
 .button:active::after, 
-.rightbutton:active::after {
+.rightButton:active::after {
   padding: 0;
   margin: 0;
   opacity: 1;
@@ -46,15 +46,15 @@
 }
 
 .button:focus,
-.rightbutton:focus {outline: 0}
+.rightButton:focus {outline: 0}
 
-.rightbutton {
+.rightButton {
   margin-left: 25px;
 }
 
 
 
-.supbutton {
+.submitButton {
     margin-top: 20px;
     width: 200px;
     height: 40px;
@@ -86,14 +86,14 @@ svg rect {
 
 
 
-.supbutton:hover rect {
+.submitButton:hover rect {
     stroke-dasharray: 200px 0 40px 0 200px 0 40px 0 ;
     background-color:mediumslateblue;
     color:black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.supbutton:active rect {
+.submitButton:active rect {
   stroke-dasharray: 200px 0 40px 0 200px 0 40px 0 ;
     background-color:mediumslateblue;
     color:black;
