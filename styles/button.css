@@ -35,9 +35,9 @@
   margin-top: -120%;
   opacity: 0;
   transition: all 0.8s
-}button
+}
 
-.button:active::after, 
+.button:active::after,
 .rightButton:active::after {
   padding: 0;
   margin: 0;

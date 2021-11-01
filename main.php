@@ -10,6 +10,7 @@ $currentTime = date("H:i:s");
 $x = $_GET['x'];
 $y = $_GET['y'];
 $r = $_GET['r'];
+$res = 0;
 
 function check($x, $y, $r) {
     if($x < 1.5 && $r>=0 && $r<=1.5 && $y>=-3 && $y<=0) {
@@ -31,6 +32,7 @@ function check($x, $y, $r) {
 $finish = microtime(true);
 $executionTime = $finish-$start;
 $executionTime = round($executionTime,7);
+
 
 array_push($_SESSION["sessionTable"], "<tr>
 <td>$x</td>
