@@ -1,12 +1,12 @@
 "use strict"
 
 let x, y, r;
-var input = document.getElementsByClassName("inputY");
-var form = document.getElementById("form");
+let input = document.getElementsByClassName("inputY");
+let form = document.getElementById("form");
 
 window.onload = function () {
 
-    let buttons = document.querySelectorAll("button[name = x-button]");
+    let buttons = document.querySelectorAll("button[name = x]");
     buttons.forEach(click);
 
     function click(element) {
@@ -23,7 +23,7 @@ window.onload = function () {
 };
 
 function validateY(elem) {
-	var error = elem.parentElement.querySelector(".error");
+	let error = elem.parentElement.querySelector(".error");
 	if (!elem.validity.valid) {
 		elem.setAttribute("aria-invalid", true);
 		error.classList.add("active");
@@ -42,13 +42,13 @@ function validateY(elem) {
 }
 
 form.addEventListener("change", function(e) {
-	var changedInput = e.target;
+	let changedInput = e.target;
 	validateY(changedInput);
 });
 
 
 function validateX() {
-    if(document.getElementsByName("x-button") == null) {
+    if(document.getElementsByName("x") == null) {
         elem.setAttribute("aria-invalid", true);
 		error.classList.add("active");
 		error.innerHTML = elem.getAttribute("titleX");
@@ -61,8 +61,8 @@ function validateX() {
 	}
 
 function validateR() {
-    select = document.getElementsByClassName("selectR");
-    if(!select.value == ""){
+    let select = document.getElementsByClassName("selectR");
+    if(!select.value === ""){
         return true;
     }
     else {
@@ -70,7 +70,7 @@ function validateR() {
 }}
 
 function send() {
-    var params = new URLSearchParams('x=' + x + '&y=' + y + "&r=" + r); 
+    let params = new URLSearchParams('x=' + x + '&y=' + y + "&r=" + r);
     if(validateX() && validateY() && validateR) {
         fetch("main.php", {
             method: "GET",
@@ -79,7 +79,6 @@ function send() {
 
     }
 }
-
 }
 
 
