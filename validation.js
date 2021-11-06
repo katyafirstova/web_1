@@ -1,5 +1,6 @@
 "use strict"
 
+
 let x, y, r;
 let input = document.getElementsByClassName("inputY");
 let form = document.getElementById("form");
@@ -46,40 +47,23 @@ form.addEventListener("change", function(e) {
 	validateY(changedInput);
 });
 
+    $('#form').submit(function() {
+        $.ajax({
+            type: "GET",
+            url: "main.php",
+            data: {
+                "x": x, "y": y, "r": r,
+                success: function (html) {
+                    $("#content").html(html);
+                }
+            }
+        });
+    });
 
-function validateX() {
-    if(document.getElementsByName("x") == null) {
-        elem.setAttribute("aria-invalid", true);
-		error.classList.add("active");
-		error.innerHTML = elem.getAttribute("titleX");
 
-    }
-    else {
-		elem.removeAttribute("aria-invalid");
-		error.innerHTML = "";
-		error.classList.remove("active");
-	}
 
-function validateR() {
-    let select = document.getElementsByClassName("selectR");
-    if(!select.value === ""){
-        return true;
-    }
-    else {
-    return false;
-}}
 
-function send() {
-    let params = new URLSearchParams('x=' + x + '&y=' + y + "&r=" + r);
-    if(validateX() && validateY() && validateR) {
-        fetch("main.php", {
-            method: "GET",
-            body: params
-        })
 
-    }
-}
-}
 
 
 

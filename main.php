@@ -6,35 +6,37 @@ $start = microtime(true);
 date_default_timezone_set('Europe/Moscow');
 $currentTime = date("H:i:s");
 
+if (isset($_GET["x"]) && isset($_GET["y"]) && isset($_GET["r"])) {
+    $x = $_GET['x'];
+    $y = $_GET['y'];
+    $r = $_GET['r'];
 
-$x = $_GET['x'];
-$y = $_GET['y'];
-$r = $_GET['r'];
-$res = 0;
+    $res = 0;
 
-function check($x, $y, $r) {
-    if($x < 1.5 && $r>=0 && $r<=1.5 && $y>=-3 && $y<=0) {
-       $res = "да"; 
+    function check($x, $y, $r)
+    {
+        if ($x < 1.5 && $r >= 0 && $r <= 1.5 && $y >= -3 && $y <= 0) {
+            $res = "да";
 
-} else if($r>=0 && $r<=1.5 && $x>=0 && $x<=3 && $y>=0 && $y<=1.5) {
-       $res = "да"; 
-    
-} else if($r>=0 && $r<=3 && $x>=0 && $x<=3 && $y>=-3 && $y<=0) {
-        $res = "да"; 
-}
-    else {
-        $res = "нет"; 
+        } else if ($r >= 0 && $r <= 1.5 && $x >= 0 && $x <= 3 && $y >= 0 && $y <= 1.5) {
+            $res = "да";
+
+        } else if ($r >= 0 && $r <= 3 && $x >= 0 && $x <= 3 && $y >= -3 && $y <= 0) {
+            $res = "да";
+        } else {
+            $res = "нет";
+            return false;
+        }
+
+        return $res;
     }
 
-    return $res;
-}
+    $finish = microtime(true);
+    $executionTime = $finish - $start;
+    $executionTime = round($executionTime, 7);
 
-$finish = microtime(true);
-$executionTime = $finish-$start;
-$executionTime = round($executionTime,7);
-
-
-array_push($_SESSION["sessionTable"], "<tr>
+    if (check($x, $y, $r) == true) {
+        array_push($_SESSION["sessionTable"], "<tr>
 <td>$x</td>
 <td>$y</td>
 <td>$r</td>
@@ -42,7 +44,7 @@ array_push($_SESSION["sessionTable"], "<tr>
 <td>$currentTime</td>
 <td>$executionTime</td>
 </tr>");
-echo "<table id='outputTable'>
+        echo "<table id='outputTable'>
     <tr>
         <th>x</th>
         <th>y</th>
@@ -51,10 +53,12 @@ echo "<table id='outputTable'>
         <th>Текущее время</th>
         <th>Время работы скрипта</th>
     </tr>";
-foreach ($_SESSION["sessionTable"] as $sessionTable) echo $sessionTable;
-echo "</table>";
 
-?>
+        foreach ($_SESSION["sessionTable"] as $sessionTable) echo $sessionTable;
+        echo "</table>";
+
+    }
+}
 
 
 

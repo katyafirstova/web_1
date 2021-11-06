@@ -33,7 +33,7 @@
             </td>
 
             <td width="500%">
-                <form align="center" action = main.php method="GET" id="form" novalidate> 
+                <form align="center" action = main.php method="GET" id="form" novalidate>
                             <h2>
                                 Выберите X:
                             </h2>
@@ -76,7 +76,7 @@
                         Введите Y:
                     </h2>
                     <div>
-                    <input name="y" min ="-3" max="5" class="inputY" placeholder = "Введите значение от -3 до 5" required="required"
+                    <input name="y" id="y" min ="-3" max="5" class="inputY" placeholder = "Введите значение от -3 до 5" required="required"
                      aria-required="true" pattern="[0-9]" title="Введите только цифры" title1 = "Введите значение от -5 до 3">
                         <span class="highlight"></span>
                         <span class="bar"></span>
@@ -87,7 +87,7 @@
                     </h2>
                   <div>
                     <select class="selectR" id="select">
-                        <option name="r" class="option"></option>
+                        <option name="r" class="option">R</option>
                         <option name="r" class="option">1</option>
                         <option name="r" class="option">1.5</option>
                         <option name="r" class="option">2</option>
@@ -95,7 +95,7 @@
                         <option name="r" class="option">3</option>
                     </select>
                   </div>
-                    <button name="submit" class = "submitButton" type="submit">
+                    <button name="submit" id="submit" class = "submitButton" type="submit">
                         Отправить
                             <svg>
                                 <rect></rect>
@@ -105,11 +105,7 @@
             </td>
         </tr>
     </table>
-
-
-      
     <script src="validation.js"></script>
-        
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </body>
         
